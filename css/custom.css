@@ -1,0 +1,25 @@
+body {
+  padding-top: 60px;
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+.text-left-custom {
+  text-align: left;
+}
+
+.text-right-custom  {
+  text-align: right;
+}
+
+.text-center-custom  {
+  text-align: center;
+}
+
+table tr.odd.row_selected td {
+    background-color: #9FAFD1 !important;
+}
+table tr.even.row_selected td {
+    background-color: #9FAFD1 !important;
+}

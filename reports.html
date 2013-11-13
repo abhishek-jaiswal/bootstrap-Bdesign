@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+
+    <title>soohoo cb</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/jquery.dataTables.css" rel="stylesheet">
+    <link href="css/morris.css" rel="stylesheet">
+    <link href="css/datepicker.css" rel="stylesheet">
+  </head>
+
+  <body>
+	 <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button onclick="openDetails()"type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">SooHoo Customs</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li class=""><a href="company.html">Company</a></li>
+			<li><a href="clients.html">Clients</a></li>
+			<li><a href="vendors.html">Vendors</a></li>
+            <li><a href="banking.html">Banking</a></li>
+            <li class="active"><a href="reports.html">Reports</a></li>
+          </ul>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-2">
+				<ul>
+				  <li><a href="javascript:show_div('div_report_profit_loss');" >Profit & Loss</a></li> 
+				  <li><a href="javascript:show_div('div_report_balance_sheet');" >Balance Sheet</a></li> 
+				  <li><a href="javascript:show_div('div_report_receive_pay');" >Payebles and Receivables</a></li>
+				  <li><a href="javascript:show_div('div_report_file_month');" >Files By month</a></li>
+				  <li><a href="javascript:show_div('div_report_expenses');" >Expenses by year</a></li>
+				</ul>
+			</div>
+			<div class="col-md-10">					
+					<div id="div_report_profit_loss">
+						<div class="row">
+							<div class="input-daterange" id="datepicker">
+							<input type="text" class="input-sm" name="start" placeholder="start date" />
+							<span class="add-on">to</span>
+							<input type="text" class="input-sm" name="end" placeholder="end date" />
+							<button type="button" class="btn btn-primary btn-sm">Run Report</button>
+							</div>
+						</div>
+						<div style="margin:10px;" class="clearfix"></div>
+						<h3 class="text-center-custom" >Profit & Loss for the period of ----</h3><hr>
+						<div class="row">
+							<table id="table1" class="table table-striped table-bordered table-hover">
+								<thead>
+									<tr>
+										<th>Account</th>
+										<th>Debit  (Dr)</th>
+										<th>Credit (Cr)</th>
+									</tr>	
+								</thead>
+								<tbody>
+									<tr>
+										<td align="center" colspan="3">Incomes</td>
+									</tr>
+									<tr>
+										<td>Sales</td>
+										<td>--</td>
+										<td>1000</td>
+									</tr>
+									<tr>
+										<td>Shipping and delivery income</td>
+										<td>--</td>
+										<td>1000</td>
+									</tr>
+									<tr>
+										<td align="center" colspan="3">Expenses</td>
+									</tr>
+									<tr>
+										<td>commission and fees</td>
+										<td>100</td>
+										<td>--</td>
+
+									</tr>
+									<tr>
+										<td>advertisinng</td>
+										<td>100</td>
+										<td>--</td>
+									</tr>
+									<tr>
+										<td>Net Operating Income</td>
+										<td>1800</td>
+										<td>--</td>
+									</tr>
+									<tr>
+										<td><strong>Transferred to Balance sheet</strong></td>
+										<td><strong>2000</strong></td>
+										<td><strong>2000</strong></td>
+									</tr>
+								</tbody>
+							</table>
+
+						</div>
+					</div>
+					
+					<div id="div_report_balance_sheet">
+						<div class="row">
+							<div class="input-daterange" id="datepicker">
+							<input type="text" class="input-sm" name="start" placeholder="start date" />
+							<span class="add-on">to</span>
+							<input type="text" class="input-sm" name="end" placeholder="end date" />
+							<button type="button" class="btn btn-primary btn-sm">Run Report</button>
+							</div>
+						</div>
+						<div style="margin:10px;" class="clearfix"></div>
+						<h3 class="text-center-custom" >Balance sheet As On  ----</h3><hr>
+						<div class="row">
+							<div class="col-md-5">
+								<table  class="table table-striped table-bordered table-hover">
+									<thead>
+										<tr>
+											<th align="center" colspan="2">Assets</th>
+										</tr>	
+									</thead>
+									<tbody>
+										<tr>
+											<td>Cash</td>
+											<td>2000</td>
+										</tr>
+										<tr>
+											<td>Petty Cash</td>
+											<td>100</td>
+										</tr>
+										<tr>
+											<td>Temporary investments</td>
+											<td>10000</td>
+										</tr>
+										<tr>
+											<td>Accounts receivable - net</td>
+											<td>40,500</td>
+										</tr>
+										<tr>
+											<td>Inventory</td>
+											<td>31000</td>
+										</tr>
+										<tr>
+											<td>Supplies</td>
+											<td>3800</td>
+										</tr>
+										<tr>
+											<td>Prepaid insurance</td>
+											<td>1500</td>
+										</tr>
+										<tr>
+											<td>--</td>
+											<td>--</td>
+										</tr>
+										<tr>
+											<td>--</td>
+											<td>88400</td>
+										</tr>
+									</tbody>
+								</table>
+
+							</div>
+									
+									 
+							<div class="col-md-5">
+								<table  class="table table-striped table-bordered table-hover">
+						 			<thead>
+										<tr>
+											<th align="center" colspan="2">LIABILITIES</th>
+										</tr>	
+									</thead>
+									<tbody>
+										<tr>
+											<td>Notes payable</td>
+											<td>5000</td>
+										</tr>
+										<tr>
+											<td>Accounts payable</td>
+											<td>35000</td>
+										</tr>
+										<tr>
+											<td>Wages payable</td>
+											<td>8500</td>
+										</tr>
+										<tr>
+											<td>Interest payable</td>
+											<td>2900</td>
+										</tr>
+										<tr>
+											<td>Taxes payable</td>
+											<td>6100</td>
+										</tr>
+										<tr>
+											<td>Warranty liability</td>
+											<td>1100</td>
+										</tr>
+										<tr>
+											<td>Unearned revenues</td>
+											<td>1500</td>
+										</tr>
+										<tr>
+											<td>Net Income</td>
+											<td>28300</td>
+										</tr>
+										<tr>
+											<td>----</td>
+											<td>88400</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							
+						</div>
+					
+					</div>
+					
+					
+					<div id="div_report_file_month"></div>
+					
+					<div id="div_report_receive_pay"></div>
+					
+					<div id="div_report_expenses"></div>
+			</div>
+		</div>
+	</div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.dataTables.js"></script>
+    <script src="js/jquery.treeview.js" type="text/javascript"></script>
+    <script src="js/morris.min.js" type="text/javascript"></script>
+    <script src="js/raphael-min.js" type="text/javascript"></script>
+    <script src="js/bootstrap-datepicker.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+		    $('.input-daterange').datepicker({
+				todayHighlight: true
+			});
+		
+		Morris.Bar({
+		  element: 'div_report_file_month',
+		  data: [
+			{x: 'Jan', 2012: 180, 2013: 70},
+			{x: 'Feb', 2012: 200, 2013: 90},
+			{x: 'Mar', 2012: 179, 2013: 56},
+			{x: 'Apr', 2012: 187, 2013: 99},
+			{x: 'May', 2012: 160, 2013: 95},
+			{x: 'Jun', 2012: 130, 2013: 92},
+			{x: 'Jul', 2012: 80, 2013: 130},
+			{x: 'Aug', 2012: 60, 2013: 220},
+			{x: 'Sep', 2012: 174, 2013: 20},
+			{x: 'Oct', 2012: 200, 2013: 300},
+			{x: 'Nov', 2012: 90, 2013: 120},
+			{x: 'Dec', 2012: 100, 2013: 30},
+		  ],
+		  xkey: 'x',
+		  ykeys: ['2012', '2013'],
+		  labels: ['Files on 2012', 'Files on 2013']
+		}).on('click', function(i, row){
+		  console.log(i, row);
+		});
+		
+		Morris.Donut({
+		  element: 'div_report_receive_pay',
+		  data: [
+			{value: 12000, label: 'Total Payables'},
+			{value: 20000, label: 'Total Receivables'},
+		  ],
+		  backgroundColor: '#ccc',
+		  labelColor: '#060',
+		  colors: [
+			'red',
+			'green',
+			'#67C69D',
+			'#95D7BB'
+		  ],
+		  formatter: function (x) { return '$ '+ x}
+		}).on('click', function(i, row){
+		  console.log(i, row);
+		});
+			var year_data = [
+			  {"period": "trucking exp", "2012": 3407, "2013": 660},
+			  {"period": "transportation exp", "2012": 3351, "2013": 629},
+			  {"period": "freight charges", "2012": 3269, "2013": 3500},
+			  {"period": "company expenses", "2012": 3246, "2013": 661},
+			  {"period": "salaries", "2012": 3257, "2013": 667},
+			  {"period": "wages", "2012": 3248, "2013": 627},
+			  {"period": "bank fees", "2012": 3171, "2013": 3200},
+			  {"period": "electricity charges", "2012": 3171, "2013": 676},
+			  {"period": "fuel cost", "2012": 3201, "2013": 656},
+			  {"period": "internet charges", "2012": 3215, "2013": 3300},
+			  {"period": "others exp", "2012": 3148, "2013": 632},
+			  {"period": "miscellaneous exp", "2012": 3155, "2013": 4000},
+			  {"period": "broking charges", "2012": 3190, "2013": 667},
+			  {"period": "us customs charges", "2012": 3226, "2013": 620},
+			  {"period": "rent ", "2012": 3245, "2013": null},
+			  {"period": "etc", "2012": 3289, "2013": null},
+
+			];
+			Morris.Bar({
+			  element: 'div_report_expenses',
+			  behaveLikeLine: true,
+			  data: year_data,
+			  xkey: 'period',
+			  ykeys: ['2012', '2013'],
+			  labels: ['year 2012', 'year 2013'],
+			  xLabelAngle: 60,
+			});
+			
+			$('#div_report_receive_pay').hide();
+			$('#div_report_file_month').hide();
+			$('#div_report_expenses').hide();
+			$('#div_report_balance_sheet').hide();
+	  });
+	  function show_div(div_id){
+		$("[id^=div_report_]").hide();
+		$('#'+div_id).show();
+	}
+    </script>
+  </body>
+</html>

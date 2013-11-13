@@ -1,0 +1,2474 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+
+    <title>Payable Accounting Details</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/jquery.dataTables.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">SooHoo Customs</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="company.html">Company</a></li>
+			<li><a href="clients.html">Clients</a></li>
+			<li class="active"><a href="vendors.html">Vendors</a></li>
+            <li><a href="banking.html">Banking</a></li>
+            <li><a href="reports.html">Reports</a></li>
+          </ul>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <ul class="nav nav nav-tabs nav-justified">
+      <li class="active"><a href="#liab" data-toggle="tab">Vendor Liabilities</a></li>
+      <li><a href="#payable_invoice" data-toggle="tab">Create Invoice</a></li>
+	  <li><a href="#paid_payments" data-toggle="tab">Payable Payments</a></li>
+
+    </ul>
+
+    <div id='content' class="tab-content">
+      <!--chart of accounts tav-->
+      <div class="tab-pane active" id="liab">
+        <div class="container"> 
+          <div class="alert alert-warning alert-dismissable">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            Showing the list of due invoices per vendor
+          </div>
+          
+			<div class="row">
+				<div class="col-sm-4">
+				<h4 class="text-center-custom" > Vendors List</h4>
+					<table id="table1" class="table table-striped table-bordered" border="0" cellpadding="0" cellspacing="0" width="100%">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Net Due Amount</th>
+							</tr>	
+						</thead>
+								<tr>
+									<td>Gabriel Brewer</td>
+									<td>36 248</td>
+								</tr>
+								<tr>
+									<td>Logan Hampton</td>
+									<td>16 782</td>
+								</tr>
+								<tr>
+									<td>Amal Valentine</td>
+									<td>3 822</td>
+								</tr>
+								<tr>
+									<td>Malcolm Knowles</td>
+									<td>9 213</td>
+								</tr>
+								<tr>
+									<td>Drew Richard</td>
+									<td>50 900</td>
+								</tr>
+								<tr>
+									<td>Philip Hernandez</td>
+									<td>15 290</td>
+								</tr>
+								<tr>
+									<td>Hunter Baird</td>
+									<td>49 058</td>
+								</tr>
+								<tr>
+									<td>Ralph Lindsey</td>
+									<td>7 747</td>
+								</tr>
+								<tr>
+									<td>Rajah Ingram</td>
+									<td>77 934</td>
+								</tr>
+								<tr>
+									<td>Alvin Glenn</td>
+									<td>89 848</td>
+								</tr>
+								<tr>
+									<td>Ashton Patrick</td>
+									<td>92 269</td>
+								</tr>
+								<tr>
+									<td>Erich Johnston</td>
+									<td>32 603</td>
+								</tr>
+								<tr>
+									<td>Devin Baker</td>
+									<td>4 319</td>
+								</tr>
+								<tr>
+									<td>Quentin Bates</td>
+									<td>73 992</td>
+								</tr>
+								<tr>
+									<td>Justin Velazquez</td>
+									<td>99 685</td>
+								</tr>
+								<tr>
+									<td>Timon Velasquez</td>
+									<td>3 580</td>
+								</tr>
+								<tr>
+									<td>Alan Long</td>
+									<td>30 101</td>
+								</tr>
+								<tr>
+									<td>Driscoll Black</td>
+									<td>66 270</td>
+								</tr>
+								<tr>
+									<td>Hiram Whitley</td>
+									<td>48 335</td>
+								</tr>
+								<tr>
+									<td>Kennedy Reyes</td>
+									<td>35 206</td>
+								</tr>
+								<tr>
+									<td>Octavius Gomez</td>
+									<td>35 327</td>
+								</tr>
+								<tr>
+									<td>Carl Cortez</td>
+									<td>76 446</td>
+								</tr>
+								<tr>
+									<td>Gage Wiley</td>
+									<td>37 601</td>
+								</tr>
+								<tr>
+									<td>Oren Christensen</td>
+									<td>26 253</td>
+								</tr>
+								<tr>
+									<td>Harrison Robles</td>
+									<td>21 966</td>
+								</tr>
+								<tr>
+									<td>Jelani Knapp</td>
+									<td>72 864</td>
+								</tr>
+								<tr>
+									<td>Ivan Solis</td>
+									<td>75 914</td>
+								</tr>
+								<tr>
+									<td>Zachary Roach</td>
+									<td>15 365</td>
+								</tr>
+								<tr>
+									<td>Tarik Richmond</td>
+									<td>26 833</td>
+								</tr>
+								<tr>
+									<td>Ronan Hood</td>
+									<td>12 503</td>
+								</tr>
+								<tr>
+									<td>Mufutau Pitts</td>
+									<td>30 995</td>
+								</tr>
+								<tr>
+									<td>Forrest Peterson</td>
+									<td>87 433</td>
+								</tr>
+								<tr>
+									<td>Deacon Nieves</td>
+									<td>88 814</td>
+								</tr>
+								<tr>
+									<td>Rajah Pittman</td>
+									<td>84 131</td>
+								</tr>
+								<tr>
+									<td>Lionel Haley</td>
+									<td>40 816</td>
+								</tr>
+								<tr>
+									<td>Ivan Grimes</td>
+									<td>33 649</td>
+								</tr>
+								<tr>
+									<td>Noble Newton</td>
+									<td>35 713</td>
+								</tr>
+								<tr>
+									<td>Keaton Bright</td>
+									<td>92 678</td>
+								</tr>
+								<tr>
+									<td>Lionel Franks</td>
+									<td>76 956</td>
+								</tr>
+								<tr>
+									<td>Dean Bird</td>
+									<td>34 297</td>
+								</tr>
+								<tr>
+									<td>Baxter Roman</td>
+									<td>24 662</td>
+								</tr>
+								<tr>
+									<td>Kelly Mccarty</td>
+									<td>66 202</td>
+								</tr>
+								<tr>
+									<td>Lyle Marshall</td>
+									<td>45 237</td>
+								</tr>
+								<tr>
+									<td>Fitzgerald Little</td>
+									<td>7 442</td>
+								</tr>
+								<tr>
+									<td>Emery Cochran</td>
+									<td>35 242</td>
+								</tr>
+								<tr>
+									<td>Xenos Baird</td>
+									<td>83 716</td>
+								</tr>
+								<tr>
+									<td>Trevor Gillespie</td>
+									<td>33 249</td>
+								</tr>
+								<tr>
+									<td>Owen Cochran</td>
+									<td>51 518</td>
+								</tr>
+								<tr>
+									<td>Acton Lowery</td>
+									<td>59 043</td>
+								</tr>
+								<tr>
+									<td>Trevor Morrison</td>
+									<td>44 391</td>
+								</tr>
+								<tr>
+									<td>Ulric Hays</td>
+									<td>7 852</td>
+								</tr>
+								<tr>
+									<td>Acton Morse</td>
+									<td>88 294</td>
+								</tr>
+								<tr>
+									<td>Arsenio Mccarthy</td>
+									<td>22 097</td>
+								</tr>
+								<tr>
+									<td>Owen Park</td>
+									<td>22 599</td>
+								</tr>
+								<tr>
+									<td>Tate Austin</td>
+									<td>70 624</td>
+								</tr>
+								<tr>
+									<td>Porter Witt</td>
+									<td>48 325</td>
+								</tr>
+								<tr>
+									<td>Reuben Gonzales</td>
+									<td>59 652</td>
+								</tr>
+								<tr>
+									<td>Kasper Hutchinson</td>
+									<td>70 257</td>
+								</tr>
+								<tr>
+									<td>Trevor Vaughan</td>
+									<td>12 846</td>
+								</tr>
+								<tr>
+									<td>Aaron Dorsey</td>
+									<td>64 650</td>
+								</tr>
+								<tr>
+									<td>Bernard Willis</td>
+									<td>13 625</td>
+								</tr>
+								<tr>
+									<td>Declan Anthony</td>
+									<td>15 072</td>
+								</tr>
+								<tr>
+									<td>Edward Ayers</td>
+									<td>91 940</td>
+								</tr>
+								<tr>
+									<td>Chester Garrison</td>
+									<td>3 347</td>
+								</tr>
+								<tr>
+									<td>Keegan Buckner</td>
+									<td>4 850</td>
+								</tr>
+								<tr>
+									<td>Xavier Kerr</td>
+									<td>26 771</td>
+								</tr>
+								<tr>
+									<td>Jeremy Woodard</td>
+									<td>69 715</td>
+								</tr>
+								<tr>
+									<td>Buckminster Mcconnell</td>
+									<td>48 011</td>
+								</tr>
+								<tr>
+									<td>Keane Tate</td>
+									<td>87 763</td>
+								</tr>
+								<tr>
+									<td>Devin Hull</td>
+									<td>20 576</td>
+								</tr>
+								<tr>
+									<td>Tucker Bell</td>
+									<td>59 118</td>
+								</tr>
+								<tr>
+									<td>Hasad Poole</td>
+									<td>42 854</td>
+								</tr>
+								<tr>
+									<td>Grant Acosta</td>
+									<td>51 281</td>
+								</tr>
+								<tr>
+									<td>Chaney Gallagher</td>
+									<td>81 424</td>
+								</tr>
+								<tr>
+									<td>Ulric Conrad</td>
+									<td>35 162</td>
+								</tr>
+								<tr>
+									<td>Keaton Bailey</td>
+									<td>19 686</td>
+								</tr>
+								<tr>
+									<td>Carl Simmons</td>
+									<td>74 436</td>
+								</tr>
+								<tr>
+									<td>Amal Kelley</td>
+									<td>83 981</td>
+								</tr>
+								<tr>
+									<td>Stone Dorsey</td>
+									<td>8 560</td>
+								</tr>
+								<tr>
+									<td>Robert House</td>
+									<td>95 965</td>
+								</tr>
+								<tr>
+									<td>Fletcher Rose</td>
+									<td>49 840</td>
+								</tr>
+								<tr>
+									<td>Vincent Stone</td>
+									<td>97 243</td>
+								</tr>
+								<tr>
+									<td>Quentin Bowen</td>
+									<td>6 648</td>
+								</tr>
+								<tr>
+									<td>Honorato Gonzales</td>
+									<td>60 946</td>
+								</tr>
+								<tr>
+									<td>Yasir Ramsey</td>
+									<td>63 846</td>
+								</tr>
+								<tr>
+									<td>Raymond Thomas</td>
+									<td>31 263</td>
+								</tr>
+								<tr>
+									<td>Raymond Donaldson</td>
+									<td>57 704</td>
+								</tr>
+								<tr>
+									<td>Levi Cummings</td>
+									<td>38 845</td>
+								</tr>
+								<tr>
+									<td>Cyrus Schneider</td>
+									<td>28 773</td>
+								</tr>
+								<tr>
+									<td>Jonas Christensen</td>
+									<td>76 339</td>
+								</tr>
+								<tr>
+									<td>Ahmed Brock</td>
+									<td>94 403</td>
+								</tr>
+								<tr>
+									<td>Chase Compton</td>
+									<td>73 385</td>
+								</tr>
+								<tr>
+									<td>Walker Donaldson</td>
+									<td>41 830</td>
+								</tr>
+								<tr>
+									<td>Merritt Schmidt</td>
+									<td>31 497</td>
+								</tr>
+								<tr>
+									<td>Ivor Klein</td>
+									<td>59 867</td>
+								</tr>
+								<tr>
+									<td>Davis Smith</td>
+									<td>47 461</td>
+								</tr>
+								<tr>
+									<td>Drake Cross</td>
+									<td>90 743</td>
+								</tr>
+								<tr>
+									<td>Odysseus Booker</td>
+									<td>25 910</td>
+								</tr>
+								<tr>
+									<td>Dorian Conrad</td>
+									<td>46 537</td>
+								</tr>
+								<tr>
+									<td>Harlan Farrell</td>
+									<td>18 622</td>
+								</tr>
+					</table>
+				</div>
+				<div class="col-sm-8">
+				<h4 id="vendor_transaction_heading" class="text-center-custom" > Aaron Dorsey's - Invoices </h4>
+					<table id="table2" class="table table-striped table-bordered" border="0" cellpadding="0" cellspacing="0" width="100%">
+						<thead>
+							<tr>
+								<th>SL#</th>
+								<th>Date</th>
+								<th>Invoice#</th>
+								<th>Due Date</th>
+								<th>Amount </th>
+								<th>Notes</th>
+								<th>Edit/Delete</th>
+							</tr>	
+						</thead>
+						<tr>
+						<td>1</td>
+						<td>2013-07-05</td>
+						<td>T3P 3J7</td>
+						<td>2014-05-03</td>
+						<td>51 992</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer adipiscing</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>2</td>
+						<td>2011-09-07</td>
+						<td>I1S 2N3</td>
+						<td>2010-11-11</td>
+						<td>62 582</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>3</td>
+						<td>2011-07-14</td>
+						<td>R1D 1A7</td>
+						<td>2013-12-25</td>
+						<td>50 676</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>4</td>
+						<td>2010-01-17</td>
+						<td>C5M 8T0</td>
+						<td>2011-06-21</td>
+						<td>79 110</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>5</td>
+						<td>2013-09-20</td>
+						<td>J5A 1Y6</td>
+						<td>2010-01-14</td>
+						<td>26 716</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer adipiscing</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>6</td>
+						<td>2012-07-08</td>
+						<td>H3W 6P5</td>
+						<td>2012-01-02</td>
+						<td>42 038</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>7</td>
+						<td>2014-03-21</td>
+						<td>C9P 7D7</td>
+						<td>2014-09-06</td>
+						<td>7 235</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>8</td>
+						<td>2013-12-01</td>
+						<td>D4X 2Z3</td>
+						<td>2014-07-21</td>
+						<td>17 290</td>
+						<td>Lorem ipsum dolor sit amet,</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>9</td>
+						<td>2012-05-30</td>
+						<td>T4Y 0A9</td>
+						<td>2013-11-07</td>
+						<td>69 695</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>10</td>
+						<td>2014-03-30</td>
+						<td>Y5Q 2Z5</td>
+						<td>2010-04-04</td>
+						<td>7 265</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>11</td>
+						<td>2011-10-24</td>
+						<td>O0T 6B3</td>
+						<td>2011-07-27</td>
+						<td>10 330</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer adipiscing</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>12</td>
+						<td>2012-02-16</td>
+						<td>E0K 3O3</td>
+						<td>2014-08-23</td>
+						<td>19 956</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>13</td>
+						<td>2011-02-28</td>
+						<td>O7Q 2E5</td>
+						<td>2012-03-25</td>
+						<td>50 426</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer adipiscing</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>14</td>
+						<td>2013-06-02</td>
+						<td>E5O 1E1</td>
+						<td>2012-11-23</td>
+						<td>72 813</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer adipiscing</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>15</td>
+						<td>2013-03-05</td>
+						<td>E7G 7V0</td>
+						<td>2012-05-05</td>
+						<td>52 998</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer adipiscing</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>16</td>
+						<td>2013-07-14</td>
+						<td>W3W 0L2</td>
+						<td>2013-09-24</td>
+						<td>26 318</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer adipiscing</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>17</td>
+						<td>2012-12-09</td>
+						<td>Z5X 5H5</td>
+						<td>2010-04-03</td>
+						<td>43 756</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>18</td>
+						<td>2014-02-13</td>
+						<td>L1E 5S7</td>
+						<td>2011-02-21</td>
+						<td>96 960</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>19</td>
+						<td>2010-12-07</td>
+						<td>X9C 0Q3</td>
+						<td>2010-09-02</td>
+						<td>62 251</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>20</td>
+						<td>2012-11-12</td>
+						<td>L3F 3S0</td>
+						<td>2014-08-28</td>
+						<td>75 277</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer adipiscing</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>21</td>
+						<td>2014-01-18</td>
+						<td>D3T 1W6</td>
+						<td>2013-06-05</td>
+						<td>78 859</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>22</td>
+						<td>2012-12-30</td>
+						<td>D2M 5J6</td>
+						<td>2012-11-22</td>
+						<td>14 565</td>
+						<td>Lorem ipsum dolor sit amet,</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>23</td>
+						<td>2010-11-19</td>
+						<td>C3W 9I9</td>
+						<td>2012-01-04</td>
+						<td>63 955</td>
+						<td>Lorem ipsum dolor sit amet,</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>24</td>
+						<td>2010-06-08</td>
+						<td>Y2W 3P0</td>
+						<td>2012-05-11</td>
+						<td>22 809</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>25</td>
+						<td>2011-05-18</td>
+						<td>I0C 4K8</td>
+						<td>2012-09-22</td>
+						<td>26 166</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>26</td>
+						<td>2013-04-25</td>
+						<td>G5H 3T7</td>
+						<td>2012-11-06</td>
+						<td>33 859</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>27</td>
+						<td>2011-08-23</td>
+						<td>D4C 2W9</td>
+						<td>2011-09-15</td>
+						<td>23 915</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>28</td>
+						<td>2010-04-03</td>
+						<td>E9G 1E1</td>
+						<td>2011-01-05</td>
+						<td>62 157</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>29</td>
+						<td>2013-11-27</td>
+						<td>U1G 0G3</td>
+						<td>2013-02-19</td>
+						<td>23 663</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>30</td>
+						<td>2014-09-12</td>
+						<td>Q2E 9T4</td>
+						<td>2013-12-09</td>
+						<td>58 725</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>31</td>
+						<td>2010-03-12</td>
+						<td>N2H 6S3</td>
+						<td>2011-08-01</td>
+						<td>60 539</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>32</td>
+						<td>2013-07-18</td>
+						<td>O3B 7G3</td>
+						<td>2011-05-12</td>
+						<td>35 850</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>33</td>
+						<td>2011-07-07</td>
+						<td>L4K 2P6</td>
+						<td>2010-12-06</td>
+						<td>68 478</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>34</td>
+						<td>2011-02-16</td>
+						<td>V9W 4E0</td>
+						<td>2011-01-12</td>
+						<td>83 303</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer adipiscing</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>35</td>
+						<td>2011-09-09</td>
+						<td>Y4S 4S9</td>
+						<td>2012-08-31</td>
+						<td>53 272</td>
+						<td>Lorem ipsum dolor sit amet,</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>36</td>
+						<td>2013-03-28</td>
+						<td>K3Y 9T9</td>
+						<td>2010-04-28</td>
+						<td>32 439</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>37</td>
+						<td>2012-10-25</td>
+						<td>A3P 4T9</td>
+						<td>2010-07-19</td>
+						<td>21 872</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>38</td>
+						<td>2014-04-07</td>
+						<td>I6Z 1P8</td>
+						<td>2014-06-08</td>
+						<td>41 172</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>39</td>
+						<td>2014-08-02</td>
+						<td>U8A 7I7</td>
+						<td>2012-07-25</td>
+						<td>42 738</td>
+						<td>Lorem ipsum dolor sit amet,</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>40</td>
+						<td>2011-10-25</td>
+						<td>B7F 4D1</td>
+						<td>2010-05-12</td>
+						<td>49 434</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer adipiscing</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>41</td>
+						<td>2014-04-02</td>
+						<td>W1E 8L7</td>
+						<td>2013-11-22</td>
+						<td>95 879</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>42</td>
+						<td>2014-02-11</td>
+						<td>F7Y 5J9</td>
+						<td>2012-12-18</td>
+						<td>52 546</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>43</td>
+						<td>2010-01-18</td>
+						<td>Z7H 7Q3</td>
+						<td>2014-01-22</td>
+						<td>86 291</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer adipiscing</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>44</td>
+						<td>2013-03-17</td>
+						<td>Y0P 0V8</td>
+						<td>2011-09-19</td>
+						<td>43 950</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer adipiscing</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>45</td>
+						<td>2012-03-21</td>
+						<td>Y9Y 7D0</td>
+						<td>2013-10-31</td>
+						<td>25 247</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>46</td>
+						<td>2010-04-13</td>
+						<td>P8Z 7P9</td>
+						<td>2011-02-13</td>
+						<td>25 312</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>47</td>
+						<td>2014-02-08</td>
+						<td>Z8Z 9Q2</td>
+						<td>2013-05-07</td>
+						<td>32 733</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>48</td>
+						<td>2012-06-27</td>
+						<td>G6E 1R7</td>
+						<td>2010-03-07</td>
+						<td>72 686</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>49</td>
+						<td>2012-11-11</td>
+						<td>M6R 4P6</td>
+						<td>2013-10-22</td>
+						<td>4 614</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>50</td>
+						<td>2011-09-08</td>
+						<td>S7W 3P8</td>
+						<td>2011-10-27</td>
+						<td>86 461</td>
+						<td>Lorem ipsum dolor sit amet,</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>51</td>
+						<td>2010-05-31</td>
+						<td>F7K 1P3</td>
+						<td>2013-10-16</td>
+						<td>2 897</td>
+						<td>Lorem ipsum dolor sit amet,</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>52</td>
+						<td>2013-07-25</td>
+						<td>F6W 4G0</td>
+						<td>2014-02-10</td>
+						<td>28 110</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>53</td>
+						<td>2011-04-09</td>
+						<td>Y8W 4K5</td>
+						<td>2013-10-27</td>
+						<td>70 271</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>54</td>
+						<td>2011-05-10</td>
+						<td>Z1B 7X9</td>
+						<td>2013-11-15</td>
+						<td>29 619</td>
+						<td>Lorem ipsum dolor sit amet,</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>55</td>
+						<td>2013-05-01</td>
+						<td>M7D 6N5</td>
+						<td>2013-09-22</td>
+						<td>95 506</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>56</td>
+						<td>2014-10-02</td>
+						<td>D9A 3O8</td>
+						<td>2014-03-10</td>
+						<td>99 982</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>57</td>
+						<td>2010-04-08</td>
+						<td>V9N 7S3</td>
+						<td>2012-09-17</td>
+						<td>71 233</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>58</td>
+						<td>2010-10-10</td>
+						<td>D9A 1D1</td>
+						<td>2010-06-08</td>
+						<td>81 017</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>59</td>
+						<td>2012-06-23</td>
+						<td>B0W 5V9</td>
+						<td>2014-02-12</td>
+						<td>15 869</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>60</td>
+						<td>2011-11-12</td>
+						<td>J5C 5K1</td>
+						<td>2010-05-27</td>
+						<td>14 647</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>61</td>
+						<td>2010-05-11</td>
+						<td>Y0S 7X2</td>
+						<td>2012-05-31</td>
+						<td>51 057</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>62</td>
+						<td>2013-08-18</td>
+						<td>Q6R 7P7</td>
+						<td>2011-09-24</td>
+						<td>35 747</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>63</td>
+						<td>2014-08-18</td>
+						<td>T8S 7W5</td>
+						<td>2013-01-26</td>
+						<td>37 660</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer adipiscing</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>64</td>
+						<td>2010-03-17</td>
+						<td>R5P 0B6</td>
+						<td>2011-05-08</td>
+						<td>50 939</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>65</td>
+						<td>2012-09-03</td>
+						<td>L8K 4V1</td>
+						<td>2012-05-03</td>
+						<td>62 459</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>66</td>
+						<td>2012-08-17</td>
+						<td>S3R 3Z3</td>
+						<td>2011-03-16</td>
+						<td>97 213</td>
+						<td>Lorem ipsum dolor sit amet,</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>67</td>
+						<td>2012-01-19</td>
+						<td>P0Y 3X6</td>
+						<td>2010-04-02</td>
+						<td>24 003</td>
+						<td>Lorem ipsum dolor sit amet,</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>68</td>
+						<td>2012-01-24</td>
+						<td>U2M 4T0</td>
+						<td>2010-01-03</td>
+						<td>17 879</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer adipiscing</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>69</td>
+						<td>2014-08-26</td>
+						<td>V7A 2O4</td>
+						<td>2014-01-16</td>
+						<td>37 137</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>70</td>
+						<td>2012-12-22</td>
+						<td>J5V 1Y5</td>
+						<td>2013-12-21</td>
+						<td>40 377</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer adipiscing</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>71</td>
+						<td>2011-01-22</td>
+						<td>Y8O 5Z5</td>
+						<td>2013-03-01</td>
+						<td>85 600</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>72</td>
+						<td>2013-05-09</td>
+						<td>W1Z 6K4</td>
+						<td>2012-04-29</td>
+						<td>90 109</td>
+						<td>Lorem ipsum dolor sit amet,</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>73</td>
+						<td>2012-12-18</td>
+						<td>E5P 9G6</td>
+						<td>2010-09-12</td>
+						<td>73 414</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>74</td>
+						<td>2011-11-14</td>
+						<td>V0X 1Q7</td>
+						<td>2010-03-02</td>
+						<td>87 040</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>75</td>
+						<td>2013-12-11</td>
+						<td>O2U 5D3</td>
+						<td>2014-08-01</td>
+						<td>53 018</td>
+						<td>Lorem ipsum dolor sit amet,</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>76</td>
+						<td>2012-07-06</td>
+						<td>C8X 9A8</td>
+						<td>2012-08-17</td>
+						<td>43 344</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>77</td>
+						<td>2014-07-15</td>
+						<td>K3S 5V3</td>
+						<td>2012-05-03</td>
+						<td>6 191</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>78</td>
+						<td>2014-02-10</td>
+						<td>C9U 9Z6</td>
+						<td>2012-11-05</td>
+						<td>58 782</td>
+						<td>Lorem ipsum dolor sit amet,</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>79</td>
+						<td>2013-11-16</td>
+						<td>P4K 1Q1</td>
+						<td>2011-07-11</td>
+						<td>65 805</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>80</td>
+						<td>2010-12-28</td>
+						<td>T5S 8J6</td>
+						<td>2012-06-21</td>
+						<td>39 310</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>81</td>
+						<td>2010-09-09</td>
+						<td>J5L 7V1</td>
+						<td>2011-03-10</td>
+						<td>77 797</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer adipiscing</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>82</td>
+						<td>2011-04-04</td>
+						<td>R4Y 7J7</td>
+						<td>2010-02-08</td>
+						<td>71 079</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>83</td>
+						<td>2013-03-05</td>
+						<td>I3U 9U1</td>
+						<td>2014-07-20</td>
+						<td>77 738</td>
+						<td>Lorem ipsum dolor sit amet,</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>84</td>
+						<td>2012-10-19</td>
+						<td>L3T 1W4</td>
+						<td>2010-10-02</td>
+						<td>80 708</td>
+						<td>Lorem ipsum dolor sit amet,</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>85</td>
+						<td>2011-03-26</td>
+						<td>F0V 5P2</td>
+						<td>2013-04-09</td>
+						<td>27 968</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer adipiscing</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>86</td>
+						<td>2011-06-09</td>
+						<td>K4T 1W6</td>
+						<td>2013-05-06</td>
+						<td>6 692</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>87</td>
+						<td>2011-03-28</td>
+						<td>G3O 5T3</td>
+						<td>2012-06-25</td>
+						<td>67 839</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer adipiscing</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>88</td>
+						<td>2011-12-27</td>
+						<td>O5O 9X3</td>
+						<td>2014-02-17</td>
+						<td>28 571</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>89</td>
+						<td>2011-01-27</td>
+						<td>U7F 9W0</td>
+						<td>2013-02-27</td>
+						<td>53 872</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>90</td>
+						<td>2014-06-01</td>
+						<td>L3Y 8S6</td>
+						<td>2013-10-05</td>
+						<td>76 655</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>91</td>
+						<td>2014-07-30</td>
+						<td>P3W 8S4</td>
+						<td>2014-04-20</td>
+						<td>15 884</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer adipiscing</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>92</td>
+						<td>2010-03-19</td>
+						<td>M7X 0I4</td>
+						<td>2013-02-07</td>
+						<td>71 643</td>
+						<td>Lorem ipsum dolor sit amet,</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>93</td>
+						<td>2011-08-17</td>
+						<td>F7F 0P3</td>
+						<td>2014-04-27</td>
+						<td>68 452</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>94</td>
+						<td>2013-04-29</td>
+						<td>L4O 8T5</td>
+						<td>2010-06-02</td>
+						<td>89 221</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>95</td>
+						<td>2011-10-09</td>
+						<td>M1S 0O5</td>
+						<td>2011-06-19</td>
+						<td>51 508</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>96</td>
+						<td>2010-11-30</td>
+						<td>H0H 7U1</td>
+						<td>2010-12-13</td>
+						<td>40 879</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>97</td>
+						<td>2010-03-31</td>
+						<td>D6V 3L0</td>
+						<td>2012-02-06</td>
+						<td>22 267</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer adipiscing</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>98</td>
+						<td>2014-03-30</td>
+						<td>A4I 4W9</td>
+						<td>2012-11-11</td>
+						<td>89 095</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer adipiscing</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>99</td>
+						<td>2011-07-01</td>
+						<td>P4C 0P8</td>
+						<td>2013-03-23</td>
+						<td>3 557</td>
+						<td>Lorem ipsum dolor sit amet,</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+						<tr>
+						<td>100</td>
+						<td>2014-07-30</td>
+						<td>E4B 4K3</td>
+						<td>2012-04-01</td>
+						<td>24 440</td>
+						<td>Lorem ipsum dolor sit amet, consectetuer</td>
+						<td>
+						  <a href="#"><img src="images/edit.png" alt="edit"/></a>&nbsp;
+						  <a href="#"><img src="images/delete.png" alt="delete"/></a>
+						</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+        </div><!-- /.container -->
+      </div>
+
+      <!--Sales tab-->
+      <div class="tab-pane" id="payable_invoice">
+	  <div class="clearfix"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8">
+					<h2></h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-2">
+					<label for="inputType" class="control-label">Select Vendor</label>
+				</div>
+				<div class="col-md-4">
+					  <select class="form-control input-sm">
+						<option>Vendor 1</option>
+						<option>Vendor 2</option>
+						<option>Vendor 3</option>
+					  </select>
+				</div>
+				<div class="col-md-1"><label for="inputType" class="control-label">Type</label></div>
+				<div class="col-md-4">
+				  <input type='radio' name='type' value='file' checked='checked'>File &nbsp;<input type='radio' name='type' value='file'>Work Order &nbsp; <input type='radio' name='type' value='company'>Company<br>
+				</div>
+			</div>
+					<div class="row">
+						<div class="col-md-4">
+							<!-- <img src="//placehold.it/170x40" alt="logo" class="img-rounded logo"> -->
+							To,
+							<address>
+								<strong>ACME, Inc.</strong><br>
+								P.O Box 3171<br>
+								Kent, WA 98089<br>
+							</address>
+						</div>
+						<div class="col-md-4 well-sm">
+							<table class="invoice-head">
+								<tbody>
+									<tr>
+										<td class="pull-right"><strong>Invoice #</strong></td>
+										<td>2340</td>
+									</tr>
+									<tr>
+										<td class="pull-right"><strong>Date</strong></td>
+										<td>10-08-2013</td>
+									</tr>
+									<tr>
+										<td class="pull-right"><strong>Due Date</strong></td>
+									  <td>10-25-2013</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-8">
+							<h2>Invoice</h2>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-8 well-sm invoice-body">
+							<table id="invoice_table" class="table table-bordered">
+								<thead>
+									<tr>
+										<th>Reference#</th>
+										<th>Amount</th>
+										<th>Notes</th>
+									</tr>
+								</thead>
+								<tbody>
+								<tr>
+									<td>111918</td>
+									<td class="price">1000</td>
+									<td>File Info</td>
+									</tr><tr>
+										<td>&nbsp;</td>
+										<td><strong>Total</strong><strong><div id="total">1000.00</div></strong>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<div class='row'>
+							  <div class='col-md-2 pull-right'>
+								<div class="btn pull-right">
+								  <button type="button" class="btn btn-primary pull-right">Save Invoice</button>
+								</div>
+							  </div>
+							</div>
+						</div>
+						<div class="col-md-2 well-sm">
+						<label><a href="javascript:addline();" >Add new line </a></label>
+						<label><a href="javascript:deleteline();" >Delete line </a></label>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-3">
+							<strong>Phone:</strong> <a href="tel:555-555-5555">555-555-5555</a>
+						</div>
+						<div class="col-md-3">
+							<strong>Email:</strong> <a href="mailto:admin@admin.com">hello@soohoocb.com</a>
+						</div>
+						<div class="col-md-3">
+							<strong>Website:</strong> <a href="http://soohoocb.com">http://soohoocb.com</a>
+						</div>
+					</div>
+				</div><!-- /.container -->
+			  </div>
+
+				<div class="tab-pane" id="paid_payments">
+				  <div class="container"> 
+					<div class="alert alert-warning alert-dismissable">
+					  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+					  Showing the list payable payments
+					</div>
+					
+					  <div class="row">
+						  <div class="col-sm-4">
+						  <h4 class="text-center-custom" > Vendors List</h4>
+							  <table id="table3" class="table table-striped table-bordered" border="0" cellpadding="0" cellspacing="0" width="100%">
+								  <thead>
+									  <tr>
+										  <th>Name</th>
+										  <th>Balance</th>
+									  </tr>	
+								  </thead>
+										  <tr>
+											  <td>Gabriel Brewer</td>
+											  <td>36 248</td>
+										  </tr>
+										  <tr>
+											  <td>Logan Hampton</td>
+											  <td>16 782</td>
+										  </tr>
+										  <tr>
+											  <td>Amal Valentine</td>
+											  <td>3 822</td>
+										  </tr>
+										  <tr>
+											  <td>Malcolm Knowles</td>
+											  <td>9 213</td>
+										  </tr>
+										  <tr>
+											  <td>Drew Richard</td>
+											  <td>50 900</td>
+										  </tr>
+										  <tr>
+											  <td>Philip Hernandez</td>
+											  <td>15 290</td>
+										  </tr>
+										  <tr>
+											  <td>Hunter Baird</td>
+											  <td>49 058</td>
+										  </tr>
+										  <tr>
+											  <td>Ralph Lindsey</td>
+											  <td>7 747</td>
+										  </tr>
+										  <tr>
+											  <td>Rajah Ingram</td>
+											  <td>77 934</td>
+										  </tr>
+										  <tr>
+											  <td>Alvin Glenn</td>
+											  <td>89 848</td>
+										  </tr>
+										  <tr>
+											  <td>Ashton Patrick</td>
+											  <td>92 269</td>
+										  </tr>
+										  <tr>
+											  <td>Erich Johnston</td>
+											  <td>32 603</td>
+										  </tr>
+										  <tr>
+											  <td>Devin Baker</td>
+											  <td>4 319</td>
+										  </tr>
+										  <tr>
+											  <td>Quentin Bates</td>
+											  <td>73 992</td>
+										  </tr>
+										  <tr>
+											  <td>Justin Velazquez</td>
+											  <td>99 685</td>
+										  </tr>
+										  <tr>
+											  <td>Timon Velasquez</td>
+											  <td>3 580</td>
+										  </tr>
+										  <tr>
+											  <td>Alan Long</td>
+											  <td>30 101</td>
+										  </tr>
+										  <tr>
+											  <td>Driscoll Black</td>
+											  <td>66 270</td>
+										  </tr>
+										  <tr>
+											  <td>Hiram Whitley</td>
+											  <td>48 335</td>
+										  </tr>
+										  <tr>
+											  <td>Kennedy Reyes</td>
+											  <td>35 206</td>
+										  </tr>
+										  <tr>
+											  <td>Octavius Gomez</td>
+											  <td>35 327</td>
+										  </tr>
+										  <tr>
+											  <td>Carl Cortez</td>
+											  <td>76 446</td>
+										  </tr>
+										  <tr>
+											  <td>Gage Wiley</td>
+											  <td>37 601</td>
+										  </tr>
+										  <tr>
+											  <td>Oren Christensen</td>
+											  <td>26 253</td>
+										  </tr>
+										  <tr>
+											  <td>Harrison Robles</td>
+											  <td>21 966</td>
+										  </tr>
+										  <tr>
+											  <td>Jelani Knapp</td>
+											  <td>72 864</td>
+										  </tr>
+										  <tr>
+											  <td>Ivan Solis</td>
+											  <td>75 914</td>
+										  </tr>
+										  <tr>
+											  <td>Zachary Roach</td>
+											  <td>15 365</td>
+										  </tr>
+										  <tr>
+											  <td>Tarik Richmond</td>
+											  <td>26 833</td>
+										  </tr>
+										  <tr>
+											  <td>Ronan Hood</td>
+											  <td>12 503</td>
+										  </tr>
+										  <tr>
+											  <td>Mufutau Pitts</td>
+											  <td>30 995</td>
+										  </tr>
+										  <tr>
+											  <td>Forrest Peterson</td>
+											  <td>87 433</td>
+										  </tr>
+										  <tr>
+											  <td>Deacon Nieves</td>
+											  <td>88 814</td>
+										  </tr>
+										  <tr>
+											  <td>Rajah Pittman</td>
+											  <td>84 131</td>
+										  </tr>
+										  <tr>
+											  <td>Lionel Haley</td>
+											  <td>40 816</td>
+										  </tr>
+										  <tr>
+											  <td>Ivan Grimes</td>
+											  <td>33 649</td>
+										  </tr>
+										  <tr>
+											  <td>Noble Newton</td>
+											  <td>35 713</td>
+										  </tr>
+										  <tr>
+											  <td>Keaton Bright</td>
+											  <td>92 678</td>
+										  </tr>
+										  <tr>
+											  <td>Lionel Franks</td>
+											  <td>76 956</td>
+										  </tr>
+										  <tr>
+											  <td>Dean Bird</td>
+											  <td>34 297</td>
+										  </tr>
+										  <tr>
+											  <td>Baxter Roman</td>
+											  <td>24 662</td>
+										  </tr>
+										  <tr>
+											  <td>Kelly Mccarty</td>
+											  <td>66 202</td>
+										  </tr>
+										  <tr>
+											  <td>Lyle Marshall</td>
+											  <td>45 237</td>
+										  </tr>
+										  <tr>
+											  <td>Fitzgerald Little</td>
+											  <td>7 442</td>
+										  </tr>
+										  <tr>
+											  <td>Emery Cochran</td>
+											  <td>35 242</td>
+										  </tr>
+										  <tr>
+											  <td>Xenos Baird</td>
+											  <td>83 716</td>
+										  </tr>
+										  <tr>
+											  <td>Trevor Gillespie</td>
+											  <td>33 249</td>
+										  </tr>
+										  <tr>
+											  <td>Owen Cochran</td>
+											  <td>51 518</td>
+										  </tr>
+										  <tr>
+											  <td>Acton Lowery</td>
+											  <td>59 043</td>
+										  </tr>
+										  <tr>
+											  <td>Trevor Morrison</td>
+											  <td>44 391</td>
+										  </tr>
+										  <tr>
+											  <td>Ulric Hays</td>
+											  <td>7 852</td>
+										  </tr>
+										  <tr>
+											  <td>Acton Morse</td>
+											  <td>88 294</td>
+										  </tr>
+										  <tr>
+											  <td>Arsenio Mccarthy</td>
+											  <td>22 097</td>
+										  </tr>
+										  <tr>
+											  <td>Owen Park</td>
+											  <td>22 599</td>
+										  </tr>
+										  <tr>
+											  <td>Tate Austin</td>
+											  <td>70 624</td>
+										  </tr>
+										  <tr>
+											  <td>Porter Witt</td>
+											  <td>48 325</td>
+										  </tr>
+										  <tr>
+											  <td>Reuben Gonzales</td>
+											  <td>59 652</td>
+										  </tr>
+										  <tr>
+											  <td>Kasper Hutchinson</td>
+											  <td>70 257</td>
+										  </tr>
+										  <tr>
+											  <td>Trevor Vaughan</td>
+											  <td>12 846</td>
+										  </tr>
+										  <tr>
+											  <td>Aaron Dorsey</td>
+											  <td>64 650</td>
+										  </tr>
+										  <tr>
+											  <td>Bernard Willis</td>
+											  <td>13 625</td>
+										  </tr>
+										  <tr>
+											  <td>Declan Anthony</td>
+											  <td>15 072</td>
+										  </tr>
+										  <tr>
+											  <td>Edward Ayers</td>
+											  <td>91 940</td>
+										  </tr>
+										  <tr>
+											  <td>Chester Garrison</td>
+											  <td>3 347</td>
+										  </tr>
+										  <tr>
+											  <td>Keegan Buckner</td>
+											  <td>4 850</td>
+										  </tr>
+										  <tr>
+											  <td>Xavier Kerr</td>
+											  <td>26 771</td>
+										  </tr>
+										  <tr>
+											  <td>Jeremy Woodard</td>
+											  <td>69 715</td>
+										  </tr>
+										  <tr>
+											  <td>Buckminster Mcconnell</td>
+											  <td>48 011</td>
+										  </tr>
+										  <tr>
+											  <td>Keane Tate</td>
+											  <td>87 763</td>
+										  </tr>
+										  <tr>
+											  <td>Devin Hull</td>
+											  <td>20 576</td>
+										  </tr>
+										  <tr>
+											  <td>Tucker Bell</td>
+											  <td>59 118</td>
+										  </tr>
+										  <tr>
+											  <td>Hasad Poole</td>
+											  <td>42 854</td>
+										  </tr>
+										  <tr>
+											  <td>Grant Acosta</td>
+											  <td>51 281</td>
+										  </tr>
+										  <tr>
+											  <td>Chaney Gallagher</td>
+											  <td>81 424</td>
+										  </tr>
+										  <tr>
+											  <td>Ulric Conrad</td>
+											  <td>35 162</td>
+										  </tr>
+										  <tr>
+											  <td>Keaton Bailey</td>
+											  <td>19 686</td>
+										  </tr>
+										  <tr>
+											  <td>Carl Simmons</td>
+											  <td>74 436</td>
+										  </tr>
+										  <tr>
+											  <td>Amal Kelley</td>
+											  <td>83 981</td>
+										  </tr>
+										  <tr>
+											  <td>Stone Dorsey</td>
+											  <td>8 560</td>
+										  </tr>
+										  <tr>
+											  <td>Robert House</td>
+											  <td>95 965</td>
+										  </tr>
+										  <tr>
+											  <td>Fletcher Rose</td>
+											  <td>49 840</td>
+										  </tr>
+										  <tr>
+											  <td>Vincent Stone</td>
+											  <td>97 243</td>
+										  </tr>
+										  <tr>
+											  <td>Quentin Bowen</td>
+											  <td>6 648</td>
+										  </tr>
+										  <tr>
+											  <td>Honorato Gonzales</td>
+											  <td>60 946</td>
+										  </tr>
+										  <tr>
+											  <td>Yasir Ramsey</td>
+											  <td>63 846</td>
+										  </tr>
+										  <tr>
+											  <td>Raymond Thomas</td>
+											  <td>31 263</td>
+										  </tr>
+										  <tr>
+											  <td>Raymond Donaldson</td>
+											  <td>57 704</td>
+										  </tr>
+										  <tr>
+											  <td>Levi Cummings</td>
+											  <td>38 845</td>
+										  </tr>
+										  <tr>
+											  <td>Cyrus Schneider</td>
+											  <td>28 773</td>
+										  </tr>
+										  <tr>
+											  <td>Jonas Christensen</td>
+											  <td>76 339</td>
+										  </tr>
+										  <tr>
+											  <td>Ahmed Brock</td>
+											  <td>94 403</td>
+										  </tr>
+										  <tr>
+											  <td>Chase Compton</td>
+											  <td>73 385</td>
+										  </tr>
+										  <tr>
+											  <td>Walker Donaldson</td>
+											  <td>41 830</td>
+										  </tr>
+										  <tr>
+											  <td>Merritt Schmidt</td>
+											  <td>31 497</td>
+										  </tr>
+										  <tr>
+											  <td>Ivor Klein</td>
+											  <td>59 867</td>
+										  </tr>
+										  <tr>
+											  <td>Davis Smith</td>
+											  <td>47 461</td>
+										  </tr>
+										  <tr>
+											  <td>Drake Cross</td>
+											  <td>90 743</td>
+										  </tr>
+										  <tr>
+											  <td>Odysseus Booker</td>
+											  <td>25 910</td>
+										  </tr>
+										  <tr>
+											  <td>Dorian Conrad</td>
+											  <td>46 537</td>
+										  </tr>
+										  <tr>
+											  <td>Harlan Farrell</td>
+											  <td>18 622</td>
+										  </tr>
+							  </table>
+						  </div>
+						  <div class="col-sm-8">
+						  <h4 id="vendor_payment_heading" class="text-center-custom" > Aaron Dorsey Payments</h4>
+							  <table id="table4" class="table table-striped table-bordered" border="0" cellpadding="0" cellspacing="0" width="100%">
+								  <thead>
+									  <tr>
+										  <th>SL#</th>
+										  <th>Invoice#</th>
+										  <th>Type</th>
+										  <th>Number</th>
+										  <th>Payment date</th>
+										  <th>Amount </th>
+									  </tr>
+									  <tr>
+										  <td>1</td>
+										  <td>123456</td>
+										  <td>Cash</td>
+										  <td>--</td>
+										  <td>2013-07-05</td>
+										  <td>1000 </td>
+									  </tr>
+									  <tr>
+										  <td>2</td>
+										  <td>986753</td>
+										  <td>Check</td>
+										  <td>1223454</td>
+										  <td>2013-09-07</td>
+										  <td>800 </td>
+									  </tr>
+									  <tr>
+										  <td>3</td>
+										  <td>986453</td>
+										  <td>ACH</td>
+										  <td>9823989</td>
+										  <td>2013-12-07</td>
+										  <td>400 </td>
+									  </tr>
+								  </tdead>
+								  
+							  </table>
+						  </div>
+					  </div>
+				  
+				  </div><!-- /.container -->
+				</div>
+			  </div>  
+
+	<!--div id="footer">
+		<div class="container">
+		<p class="text-muted credit">Footer data </p>
+		</div>
+	</div-->
+
+<!-- ######################## model starts ####################### -->
+<div class="modal fade" id="add_coa_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Add item to Charts of accounts</h4>
+      </div>
+      <div class="modal-body">
+		<form id="add_coa_form" class="form-horizontal" role="form">
+		  <div class="form-group">
+			<label for="inputType" class="col-sm-4 control-label">Type</label>
+			<div class="col-sm-8">
+			  <select class="form-control input-sm">
+				<option>Bank</option>
+				<option>Fixed assets</option>
+				<option>Other Assets</option>
+			  </select>
+			</div>
+		  </div>
+		  <!-- <div class="form-group">
+			<label for="inputDetailType" class="col-sm-4 control-label">Detail Type</label>
+			<div class="col-sm-8">
+			  <input type="" class="form-control input-sm" id="" placeholder="">
+			</div>
+		  </div> -->
+		  <div class="form-group">
+			<label for="inputDetailType" class="col-sm-4 control-label">Name</label>
+			<div class="col-sm-8">
+				<input type="" class="form-control input-sm" id="" placeholder="" value="bank expenses">
+			</div>
+		  </div>
+		  <div class="form-group">
+			<label for="inputDetailType" class="col-sm-4 control-label">Description</label>
+			<div class="col-sm-8">
+				<textarea class="form-control input-sm" rows="3">description notes</textarea>
+			</div>
+		  </div>
+		  <div class="form-group">
+			<label for="inputDetailType" class="col-sm-4 control-label">Balance</label>
+			<div class="col-sm-8">
+				<input type="" class="form-control input-sm" id="" placeholder="" value="1000">
+			</div>
+		  </div>
+		   <div class="form-group">
+			<label for="inputDetailType" class="col-sm-4 control-label">As on </label>
+			<div class="col-sm-8">
+				<input type="date" class="form-control input-sm" id="" placeholder=""value="2013-11-7">
+			</div>
+		  </div>
+		  <div class="form-group">
+			<div class="col-sm-offset-2 col-sm-10">
+			  <div class="checkbox">
+				<label>
+				  <input id="is_children_ckb" type="checkbox"> Is Sub Account
+				</label>
+			  </div>
+			</div>
+		  </div>
+		   <div id="is_chidlren_div" class="form-group hide">
+			<label for="inputDetailType" class="col-sm-4 control-label">Parent Account</label>
+			<div class="col-sm-8">
+				<input type="" class="form-control input-sm" id="" placeholder="" value="some bank">
+			</div>
+		  </div>
+		  <div class="form-group">
+			<div class="col-sm-offset-2 col-sm-10">
+			  <button type="submit" class="btn btn-primary">Save</button>
+			  <button type="cancel" class="btn btn-default">Cancel</button>
+			</div>
+		  </div>
+		</form>
+	  </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">print</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!-- ######################## model ends ####################### -->	
+	
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.dataTables.js"></script>
+    <script src="js/jquery.treeview.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+          $('#table1').dataTable({
+			 "iDisplayLength": 50,
+		  });
+		  $('#table2').dataTable({
+			 "iDisplayLength": 50,
+		  });
+          //$('#table2').dataTable();
+		  //removing dropdown for per page
+		  $('#table1_length').css("display", "none");
+		  $('#table2_length').css("display", "none");
+		  
+		  $('#table3').dataTable({
+			 "iDisplayLength": 50,
+		  });
+		  $('#table4').dataTable({
+			 "iDisplayLength": 50,
+		  });
+          //$('#table2').dataTable();
+		  //removing dropdown for per page
+		  $('#table3_length').css("display", "none");
+		  $('#table4_length').css("display", "none");
+		  
+		  $('#add_coa_btn').click( function () {
+			$("#add_coa_modal").modal('show');
+		  });
+		  
+		  $('#edit_coa_btn').click( function () {
+			
+			$("#add_coa_modal").modal('show');
+		  });
+		  
+		  $('#is_children_ckb').click( function () {
+			//alert($(this).prop("checked"));
+			//$var_chk = $(this).prop("checked");
+			$("#is_chidlren_div" ).toggleClass( 'hide' );
+		  });
+		  calculateSum();
+		  //
+		  
+		  $('#table1 tbody tr').click( function () {
+            $("#vendor_transaction_heading").html($(this).closest("tr").find("td:nth-child(1)").text() + "'s - Invoices");
+           // $("#myModal").modal('show');
+            //showpopup(this);
+			if ( $(this).hasClass('row_selected') ) {
+				$(this).removeClass('row_selected');
+			}
+			else {
+				//oTable.$('tr.row_selected').removeClass('row_selected');
+				$('#table1 tbody tr.row_selected').removeClass('row_selected');
+				$(this).addClass('row_selected');
+			}
+            console.log($(this).closest("tr").find("td:nth-child(1)").text());
+          });
+		  
+		  $('#table3 tbody tr').click( function () {
+            $("#vendor_payment_heading").html($(this).closest("tr").find("td:nth-child(1)").text() + " Payments");
+           // $("#myModal").modal('show');
+            //showpopup(this);
+			if ( $(this).hasClass('row_selected') ) {
+				$(this).removeClass('row_selected');
+			}
+			else {
+				//oTable.$('tr.row_selected').removeClass('row_selected');
+				$('#table3 tbody tr.row_selected').removeClass('row_selected');
+				$(this).addClass('row_selected');
+			}
+            console.log($(this).closest("tr").find("td:nth-child(1)").text());
+          });
+      });
+	  function addline(){
+		//alert("here");
+		//$('#invoice_table > tbody:last').append('<tr>...</tr><tr>...</tr>');
+		var table=document.getElementById("invoice_table");
+		var row=table.insertRow(1);
+		var cell1=row.insertCell(0);
+		var cell2=row.insertCell(1);
+		var cell3=row.insertCell(2);
+		//cell1.innerHTML='<input type="text">';
+		cell1.innerHTML='119280';
+		cell2.innerHTML='100';
+		cell3.innerHTML='New File Ref.';
+		cell2.setAttribute('class','price');
+		calculateSum();
+	  }
+	  function deleteline(){
+		var rowCount = $('#invoice_table tr').length;
+		if(rowCount > 3 ) {
+			document.getElementById("invoice_table").deleteRow(1);
+		}
+		calculateSum();
+	  }
+	   function calculateSum() {
+		var sum = 0;
+		// iterate through each td based on class and add the values
+		$(".price").each(function() {
+			var value = $(this).text();
+			console.log(value);
+			// add only if the value is number
+			if(!isNaN(value) && value.length != 0) {
+				sum += parseFloat(value);
+			}
+		});
+		$('#total').text(sum);
+		}
+	
+    </script>
+  </body>
+</html>
